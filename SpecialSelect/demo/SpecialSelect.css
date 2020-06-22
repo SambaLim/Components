@@ -1,0 +1,96 @@
+#root {
+  display:flex;
+  align-items: flex-start;
+  width:100%;
+  flex-wrap: no-wrap;
+}
+
+#divEl {
+  display:flex; 
+  flex-direction: column; 
+  flex-basis: 100px; 
+  flex-grow: 4; 
+}
+
+#areaButtonEl {
+  display: flex;
+  justify-content: center;
+  flex-grow: 1;
+}
+
+#inputEl {
+  padding: .75rem .75rem; 
+  font-size: 1rem; 
+  color: #55595c; 
+  border: 1px solid rgba(0,0,0,.15);
+  flex-grow: 8;
+}
+
+#inputEl:focus {
+  border-radius: 0px !important;
+  outline: 1px solid #0082c9;
+}
+
+#selectEl {
+  width: 80%;
+}
+
+#addButtonEl {
+  color: #e1f5fe; 
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  font-size: 26px; 
+  font-weight: 600; 
+  border: 1px solid #0277bd; 
+  cursor: pointer; 
+  background-color: #0288d1; 
+  flex-grow: 2;
+  flex-basis: 50px;
+}
+
+#addButtonEl:hover {
+  background-color: #039be5;
+}
+
+#resultListEl {
+  margin: 0;
+  margin-left: 5%; 
+  padding: 10px; 
+  list-style: none; 
+  flex-basis: 200px; 
+  flex-grow: 6; 
+  display:flex; 
+  flex-wrap: wrap; 
+  border: 1px solid #d9d9d9; 
+  border-radius: 6px; 
+  visibility: hidden; 
+  background-color: rgb(248, 249, 249);
+}
+
+.badge {
+  display: flex; 
+  justify-content: space-between; 
+  padding: 5px;
+  padding-right: 2px; 
+  margin: 5px; 
+  margin-top: 0px; 
+  border: 1px solid #d9d9d9; 
+  border-radius: 8px; 
+  background-color: white;
+}
+
+.badgeText {
+  font-size: 1rem; 
+  color: gray; 
+}
+
+.badgeDeleteButton {
+  margin-right:2px;
+  border: 0px; 
+  border-radius: 50%; 
+  font-size: 1rem; 
+  font-weight: 500; 
+  background-color: white; 
+  color: gray; 
+  cursor: pointer;
+}

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Practice</title>
+  <link rel="stylesheet" href="./SpecialSelect.css" />
+</head>
+<body>
+  <div id="root"></div>
+  <!-- <script src="../Bundle.js"></script> -->
+  <script src="../SpecialSelect.js"></script>
+  <script>
+    const dummyList = [
+      { id: 'seq01', title: '사자'},
+      { id: 'seq02', title: '백호'},
+      { id: 'seq03', title: '꿩'},
+      { id: 'seq04', title: '오리'},
+      { id: 'seq05', title: '닭'},
+      { id: 'seq06', title: '불곰'},
+      { id: 'seq07', title: '곰'},
+      { id: 'seq08', title: '이리'},
+      { id: 'seq09', title: '늑대'},
+      { id: 'seq10', title: '여우'},
+      { id: 'seq10', title: '호랑이'}
+    ];
+    // 실행하는 부분
+    const rootEl = document.querySelector('#root');
+    const specialSelect = new SpecialSelect(rootEl);
+    specialSelect.init({ dataList: dummyList });
+  </script>
+</body>
+</html>
