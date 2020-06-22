@@ -6,7 +6,7 @@
 
 ## 📚 컴포넌트 목록
 
-- SpecialSelect: SearchBox에서 값을 입력하였을 때, 이를 뱃지로 바꿉니다.
+- `SpecialSelect`: `Input`에서 값을 입력하였을 때, 이를 뱃지로 바꿉니다.
 
 ## 🤷‍♂️ 어떻게 사용해야 할까요?
 
