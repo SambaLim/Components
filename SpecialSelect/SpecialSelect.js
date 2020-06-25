@@ -14,7 +14,7 @@ const SpecialSelect = function(rootElement) {
 
 SpecialSelect.prototype.init = function(props) {
 
-  const { dataList } = props;
+  const { dataList, resultList } = props;
 
   const divEl = document.createElement('div');
   divEl.id = "divEl";
@@ -43,6 +43,10 @@ SpecialSelect.prototype.init = function(props) {
   if(dataList) {
     this.fullDataList = dataList;
     this.setSelectOptions(dataList);
+  }
+
+  if(resultList) {
+    this.setResultList(resultList);
   }
 
   this.addButtonEl.addEventListener('click', (event) => {
@@ -254,10 +258,6 @@ SpecialSelect.prototype.filterSpace = function(list) {
   });
 }
 
-SpecialSelect.prototype.getResultList = function() {
-  return this.filterSpace(this.resultList);
-}
-
 SpecialSelect.prototype.isNewWithId = function(id) {
   
   let value;
@@ -266,4 +266,13 @@ SpecialSelect.prototype.isNewWithId = function(id) {
   });
 
   return value ? false : true;
+}
+
+SpecialSelect.prototype.setResultList = function(list) {
+  this.resultList = list;
+  this.setResultListEl();
+}
+
+SpecialSelect.prototype.getResultList = function() {
+  return this.filterSpace(this.resultList);
 }
