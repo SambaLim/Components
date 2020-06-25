@@ -24,10 +24,16 @@
       { id: 'seq10', title: '여우'},
       { id: 'seq10', title: '호랑이'}
     ];
+
+    const dummyResultList = [
+      { id: 'result01', title: '어류'},
+      { id: 'result02', title: '조류'},
+      { id: 'result03', title: '포유류'}
+    ]
     // 실행하는 부분
     const rootEl = document.querySelector('#root');
     const specialSelect = new SpecialSelect(rootEl);
-    specialSelect.init({ dataList: dummyList });
+    specialSelect.init({ dataList: dummyList, resultList: dummyResultList });
   </script>
 </body>
 </html>

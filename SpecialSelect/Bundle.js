@@ -31,7 +31,8 @@ var SpecialSelect = function SpecialSelect(rootElement) {
 SpecialSelect.prototype.init = function (props) {
   var _this = this;
 
-  var dataList = props.dataList;
+  var dataList = props.dataList,
+      resultList = props.resultList;
   var divEl = document.createElement('div');
   divEl.id = "divEl";
   var selectEl = document.createElement('select');
@@ -56,6 +57,10 @@ SpecialSelect.prototype.init = function (props) {
   if (dataList) {
     this.fullDataList = dataList;
     this.setSelectOptions(dataList);
+  }
+
+  if (resultList) {
+    this.setResultList(resultList);
   }
 
   this.addButtonEl.addEventListener('click', function (event) {
@@ -274,14 +279,19 @@ SpecialSelect.prototype.filterSpace = function (list) {
   });
 };
 
-SpecialSelect.prototype.getResultList = function () {
-  return this.filterSpace(this.resultList);
-};
-
 SpecialSelect.prototype.isNewWithId = function (id) {
   var value;
   this.fullDataList.forEach(function (data, index) {
     if (data.id == id) value = data;
   });
   return value ? false : true;
+};
+
+SpecialSelect.prototype.setResultList = function (list) {
+  this.resultList = list;
+  this.setResultListEl();
+};
+
+SpecialSelect.prototype.getResultList = function () {
+  return this.filterSpace(this.resultList);
 };
